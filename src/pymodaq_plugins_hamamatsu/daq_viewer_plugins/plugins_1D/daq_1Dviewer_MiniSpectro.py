@@ -24,6 +24,8 @@ class DAQ_1DViewer_MiniSpectro(DAQ_Viewer_base):
     path in the python wrapper "minispectro.py" in the case you place it somewhere else. This .dll file can also be found in
     the installation files of the Hamamatsu Evaluation Software originally provided with the device CD.
     """
+
+    supported_platforms = ('win32',)  # a Windows .NET driver
     params = comon_parameters + [
         {'title': 'Device ID', 'name': 'unit_id', 'type': 'str', 'value': '', 'readonly': True},
         {'title': 'Sensor name', 'name': 'sensor_name', 'type': 'str', 'value': '', 'readonly': True},
